@@ -1,0 +1,360 @@
+/********************************************
+	Tag Resets
+********************************************/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/********************************************
+	Normalize CSS
+	http://necolas.github.com/normalize.css/
+********************************************/
+
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100%;
+	font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+	display: block;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+input,
+textarea,
+button,
+select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea {
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ******************************************
+	Custom Styles
+****************************************** */
+
+/*Scale=2
+3/4 scale=1.5*
+1/2 scale=1*
+1/4 scale=.5*
+1/8 scale=.25
+*/
+
+html {
+		font-size: 100%;
+		line-height: 1;
+		-moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+
+p {
+	font-size:1.375em;
+	line-height:1.455; /* 2 / 1.375 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:100;
+}
+
+h1 {
+	font-size:3.094em;
+	line-height:1.293; /* 4 / 3.094 */
+}
+
+h2 {
+	font-size:2.75em;
+	line-height:1.091 /* 3 / 2.75 */
+}
+
+h3 {
+	font-size:2.0625em;
+	line-height:1.121 /* 2.5 / 2.0628 */
+}
+
+#content article {
+	padding-bottom:2em;
+	padding-top:1.5em;
+}
+
+h1, h2 {
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+    }	
+
+h4 {
+	font-size:1.719em;
+	line-height:1.163
+    text-transform: uppercase;
+}
+
+#portfolio h4 {
+    line-height:1.455
+}
+
+h5,h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: .85em;
+	line-height: 1.53;
+	font-weight: 500;
+					}
+    
+h6 {
+	color: #aaa;
+	font-weight: 200;
+					 }	
+.box ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+#nav h3 {
+    text-transform: capitalize;
+}
+
+/*	
+---------------------------			
+Boxes for Portfolio images and "Currently", "Previously and "Skills"
+---------------------------
+*/
+    	
+.box h4 {
+    color: #999;
+    border-top: 4px double #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+figure,
+.box {
+    background: #fff;
+    -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    -webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+    padding: 1em;
+}
+
+section footer {
+    clear: both;
+    }
+
+#nav,#masthead,#content,#colophon {
+	margin: 0 18px;
+}
+
+#masthead {
+	color:#fff
+}
+
+#container-nav {
+	background:#fff;
+}
+
+#container-header {
+	background:#2A4F5E;
+	min-height: 350px;
+	width:100%;
+}
+
+#container-content {
+	padding: 24px 0;
+}
+
+#container-footer {
+	padding: 32px 0;
+	background:#2A4F5E;
+	color:#eee;
+	font-weight:100;
+}
+.box {
+	padding: 14px;
+}
+img {
+	max-width:100%;
+}
+
+	/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+.group:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+	clear: both;
+}
+
+.group {
+	*zoom: 1; /* 3 */
+}
+	
+@media print and (max-width: 8.5in){
+
+	#masthead {
+		color:black;
+	}
+
+	#container-header {
+		height: auto;
+	}
+
+	img {
+		width:2in;
+	}
+
+	#portfolio	{
+		float:left;
+		width:45%;
+	}
+
+	#resume	{
+		float:right;
+		width:45%;
+	}
+
+	#container-footer	{
+		clear:both;
+	}
+
+}
+
+/* ******************************************
+	Web Fonts
+****************************************** */
+
+
+body {
+	font-family: 'Wire One', sans-serif;
+}
+
+h1 {
+	font-family: 'archisticobold', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ******************************************
+	Media Queries for screen wider than 720px
+****************************************** */
+@media screen and (min-width: 720px){
+
+	#about article,
+	#resume article {
+		float:left;
+		width:33%;
+	}
+	
+	#portfolio article {
+		float:left;
+		width:50%;
+	}
+	
+	body {
+		font-size:110%;
+	}
+}
