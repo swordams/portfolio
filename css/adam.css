@@ -142,11 +142,10 @@ table {
 	Custom Styles
 ****************************************** */
 
-/*Scale=2
-3/4 scale=1.5*
-1/2 scale=1*
-1/4 scale=.5*
-1/8 scale=.25
+/*Scale=1.5
+3/4 scale=1.125
+1/2 scale=.75
+1/4 scale=.375
 */
 
 html {
@@ -157,9 +156,9 @@ html {
 		-webkit-text-size-adjust: 100%;
 	}
 
-p {
-	font-size:1.375em;
-	line-height:1.455; /* 2 / 1.375 */
+p, #resume li {
+	font-size:1em;
+	line-height:1.5
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -167,18 +166,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size:3.094em;
-	line-height:1.293; /* 4 / 3.094 */
+	font-size:3em;
+	line-height: 1.5;
 }
 
 h2 {
-	font-size:2.75em;
-	line-height:1.091 /* 3 / 2.75 */
+	font-size:2em;
+	line-height:1;
 }
 
 h3 {
-	font-size:2.0625em;
-	line-height:1.121 /* 2.5 / 2.0628 */
+	font-size:1.5em;
+	line-height:1.5
 }
 
 #content article {
@@ -187,12 +186,12 @@ h3 {
 }
 
 h1, h2 {
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 1);
     }	
 
 h4 {
-	font-size:1.719em;
-	line-height:1.163
+	font-size:1.25em;
+	line-height:1.2
     text-transform: uppercase;
 }
 
@@ -201,10 +200,9 @@ h4 {
 }
 
 h5,h6 {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: .85em;
-	line-height: 1.53;
-	font-weight: 500;
+	font-size:1 em;
+	line-height:1.5;
+	font-weight: 400;
 					}
     
 h6 {
@@ -221,6 +219,223 @@ h6 {
     text-transform: capitalize;
 }
 
+.wrapper {
+	padding: .75em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#masthead {
+	width:80%;
+}
+
+/* Headshot */
+
+#adam {
+    width: 25%;
+    height: 0;
+    padding-bottom: 25%;
+}
+    
+#adam img {
+    width: 100%;
+}
+	
+/* Form / Basic Layout */
+
+form {
+	padding: 0 0 .5em;
+	}
+	
+form ul {
+	list-style: none;
+	padding: 1em 0 0;
+	}
+	
+form li {
+	padding: 0 0 1em;
+	}
+	
+legend {
+	font-size:1.5em;
+	line-height:1.5;
+	}
+			
+label {
+	display: block;
+	font-size:1.25em;
+	line-height:1.2;
+	padding: 0 0 .5em;
+	}
+		
+legend, label {      
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #fff;
+	}
+	
+input,
+textarea {
+	display: block;
+	width: 100%;
+	font-family: 'Wire One', sans-serif;
+	font-size: 1.375em;
+	line-height: 1.09;
+	font-weight: 500;
+	padding: .25em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+	padding-bottom: 10%;
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+	}
+
+.send {
+	display: inline-block;
+	max-width: 30em;
+	font-size:1.5em;
+	line-height:1.5;
+	font-weight: 500;
+	color: #fff;
+	text-decoration: none;
+	background: #0074b0;
+	margin: .5em .25em;
+	padding: .25em;
+	border: 0;
+	border-radius: 1em;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, .75);
+	}
+	
+.send:hover {
+	background: #6f6f6f;
+	}
+	
+.send:active,
+.send:focus {
+	background: #555;
+}
+
+/* Responsive Navigation */
+
+#nav {
+	padding: .75em 0;
+}
+
+#nav h3 {
+	float: left;
+	text-transform: capitalize; 
+}
+
+#nav ul {
+	list-style: none;
+	padding: 0;
+	border-bottom: 1px solid #eee;
+	margin: .75em 0 .25em;
+}
+
+#nav li {
+   border-top: 1px solid #eee;
+}
+
+#nav a {
+   display: block;
+   font-size: 1em;
+   color: #333;
+   text-decoration: none;
+   padding: .75em 1em; 
+}
+
+#nav a:hover {
+   background: #f8f8f8;
+}
+
+#nav nav {
+	height: 0;
+	overflow: hidden;
+}
+
+body { 
+	-webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix {
+	from {padding: 0;} 
+	to {padding: 0;} 
+}
+
+#nav input[type=checkbox] {
+	position: absolute;
+	top: -999em;
+	left: -999em;
+}
+
+#nav label { 
+	display: block;
+	background: url("../img/menu.png") no-repeat right center;
+	text-indent: -999em;
+	cursor: pointer;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+}
+
+#nav input[type=checkbox]:checked ~ nav {
+	height: auto;
+	overflow: hidden;  
+}
+
+/********************************************
+Fluid Media
+********************************************/
+
+figure {
+	position: relative;
+}
+
+figure img,
+figure object,
+figure embed,
+figure video {
+	display: block;
+	max-width: 100%; 
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* 
+interpolation-mode
+http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
+ */
+
+
+/* Creates hover effect on Portfolio images */
+#portfolio figure:hover,
+.box:hover {
+	-moz-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
+	-webkit-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
+	box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
+}
+
+/* Image Offset for Indication of Linked Content */
+
+#portfolio figure:hover {
+	bottom: .26em;
+}
+
 /*	
 ---------------------------			
 Boxes for Portfolio images and "Currently", "Previously and "Skills"
@@ -235,7 +450,7 @@ Boxes for Portfolio images and "Currently", "Previously and "Skills"
     text-align: center;
 }
 
-figure,
+#portfolio figure,
 .box {
     background: #fff;
     -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
@@ -260,19 +475,13 @@ section footer {
 	background:#fff;
 }
 
-#container-header {
-	background:#2A4F5E;
-	min-height: 350px;
-	width:100%;
-}
-
 #container-content {
 	padding: 24px 0;
 }
 
 #container-footer {
 	padding: 32px 0;
-	background:#2A4F5E;
+	background:#284084;
 	color:#eee;
 	font-weight:100;
 }
@@ -283,7 +492,14 @@ img {
 	max-width:100%;
 }
 
-	/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+#nav,
+#masthead,
+#content,
+#colophon {
+	margin: 0 3.3%;
+}
+
+/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
 
 .group:after {
 	content: " "; /* 1 */
@@ -294,36 +510,22 @@ img {
 .group {
 	*zoom: 1; /* 3 */
 }
-	
-@media print and (max-width: 8.5in){
 
-	#masthead {
-		color:black;
-	}
+/* ******************************************
+    IE 7 and below, legacy browser style fixes
+****************************************** */
 
-	#container-header {
-		height: auto;
-	}
-
-	img {
-		width:2in;
-	}
-
-	#portfolio	{
-		float:left;
-		width:45%;
-	}
-
-	#resume	{
-		float:right;
-		width:45%;
-	}
-
-	#container-footer	{
-		clear:both;
-	}
-
+.ie .wrapper {
+    *behavior: url("http://swordams.github.io/portfolio/js/boxsizing.htc");
 }
+
+/* Clearfix */
+
+.group {
+    *zoom: 1;
+    }
+	
+
 
 /* ******************************************
 	Web Fonts
@@ -331,30 +533,168 @@ img {
 
 
 body {
-	font-family: 'Wire One', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-weight:200;
 }
 
 h1 {
 	font-family: 'archisticobold', "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+/* ******************************************	
+MEDIA QUERY FOR BACKGROUND IMAGE WHEN LESS THAN 45 EM (720PX)
+****************************************** */
+@media screen and (max-width: 45em) {
+	#container-header {
+		background:#284084 url("../img/bp-s.jpg") no-repeat top center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		padding: 10% 0;
+	}
+}
+	
 /* ******************************************
 	Media Queries for screen wider than 720px
 ****************************************** */
-@media screen and (min-width: 720px){
+@media screen and (min-width: 45em){
 
 	#about article,
-	#resume article {
+	#resume article,
+	#portfolio article	{
 		float:left;
-		width:33%;
-	}
-	
-	#portfolio article {
-		float:left;
-		width:50%;
+		width:33.33%;
 	}
 	
 	body {
 		font-size:110%;
 	}
+	
+		#masthead {
+		max-width:40em;
+	}
+	
+	.name, .email {
+		float: left;
+		width: 50%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+    }
+    
+	.name {
+		padding-right: 1em;
+	}
+		
+	.email {
+		padding-left: 1em;
+	}
+		
+	.send {
+		width: 48.6%;
+	}
+	
+	#nav {
+        padding: 0;
+    }
+	
+	#nav h3 {
+         margin: .175em 1em 0 0;
+    }
+	
+	#nav label {
+        display: none;
+    }
+	
+	#nav nav {
+        height: auto;
+        overflow: visible;
+    }
+	
+	#nav ul {
+        border: 0;
+        margin: 0;
+        }
+		
+	#nav li {
+        display: inline;
+        border: 0;
+    }
+	
+	#nav a {
+        display: inline-block;
+    }
+}
+	
+@media screen and (min-width: 45em) and (max-width:60em){
+	#container-header {
+		background:#284084 url("../img/bp-l.jpg") no-repeat top center;
+		padding: 10% 0;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+}
+
+/* ******************************************
+	Media Queries for screen wider than 960px
+****************************************** */
+
+@media (min-width: 60em) {
+
+	.name, .email {
+		padding-right: 1em;
+		padding-left: 0;
+		clear: both;
+	}
+		
+	.message textarea {
+		width: 50%;
+	}
+		
+	.send {
+		width: 25%;
+		margin-left: 50%;
+	}
+    
+	#container-header {
+		background:#284084 url("../img/bp-xl.jpg") no-repeat top center;
+		padding: 10% 0;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+}
+
+/* ******************************************
+	Print Styles
+****************************************** */
+@media print and (max-width: 8.5in){
+	
+	#masthead {
+		color:black;
+	}
+	
+	#container-header {
+		height: auto;
+	}
+	
+	img {
+		width:2in;
+	}
+	
+	#portfolio	{
+		float:left;
+		width:45%;
+	}
+	
+	#resume	{
+		float:right;
+		width:45%;
+	}
+	
+	#container-footer	{
+		clear:both;
+	}
+	
 }
