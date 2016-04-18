@@ -6,35 +6,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" href="./css/adam.css"/>
 		<link rel="stylesheet" href="./webfonts/archistico_bold_macroman/archistobold.css"/>
-		<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dosis:400,200,700' rel='stylesheet' type='text/css'>
 		<script src="./js/hideaddressbar.js"></script>
 		<!-- Option 1 Add media query support for IE8 and under. Must place media queries in external stylesheet -->
 		<script src=".js/respond.min.js"></script>
+		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="js/picturefill.js"></script>
+		<script src="js/matchmedia.js"></script>
+		
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
+		<style type="text/css" media="all">
+	
+		</style>
 	</head>
 		
 	<body lang="en">
 		<div id="container-nav">
-			<section id="nav">
+			<section id="nav" class="wrapper">
 			<h3>Adam Schwartz</h2>
-			<!-- Turn off for now
+			<!-- Checkbox Hack markup -->
+			<input type="checkbox" id="toggle" />
+			<label for="toggle" onclick>Menu</label>
+			<!-- /Checkbox Hack markup -->
 			<nav>
 				<ul>
-					<li>About me</li>
-					<li>Portfolio</li>
-					<li>Resume</li>
-					<li>LinkedIn</li>
-					<li>Contact me</li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-			-->
+
 			</section>
 		</div>
 		<div id="container-header">
-			<header id="masthead">
+			<header id="masthead" class="wrapper">
+			
+			<figure id="adam"> 
+				<div data-picture data-alt="Adam Schwartz">
+					<div data-src="img/adam-s.png"></div>
+					<div data-src="img/adam-m.png" data-media="(min-width: 45em)"></div>
+					<div data-src="img/adam-l.png" data-media="(min-width: 60em)"></div>
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript>
+						<img src="./img/adam-s.png" alt="Adam Schwartz">
+					</noscript>
+				</div>
+			</figure>
 			<h1>Hello, I'm Adam.</h1>
 			<h2>I'm a freelance web-developer in Chicago.</h2>
 			</header>
@@ -48,18 +70,24 @@
 					</header>
 				</section>
 				<section id="portfolio" class="group">
-					<header>
+					<header class="wrapper">
 						<h3>My Portfolio</h3>
 						<p>Here are some of my projects</p>
 					</header>
-					<article>
+					<article class="group wrapper">
 						<h4>Python Rocketry</h4>
 						<figure>
 							<img src="img/pythonsmall.png">
 						</figure>
 					</article>
-					<article>
+					<article class="group wrapper">
 						<h4>Rogers Park Food Co-op</h4>
+						<figure>
+							<img src="img/rpfcsmall.png">
+						</figure>
+					</article>
+					<article class="group wrapper">
+						<h4>Mystery Site</h4>
 						<figure>
 							<img src="img/rpfcsmall.png">
 						</figure>
@@ -67,11 +95,11 @@
 				</section>	
 				<section id="resume" class="group">
 			
-						<header>
+						<header class="wrapper">
 							<h3>My Resume</h3>
 							<p>Current/previous positions and skill set</p>
 						</header>
-					<article>
+					<article class="wrapper">
 					<div class="box">
 						<h4>Currently</h4>
 
@@ -82,7 +110,7 @@
 						<p>I will add more later</p>
 					</div>
 					</article>
-					<article>
+					<article class="wrapper">
 					<div class="box">
 						<h4>Previously</h4>
 
@@ -93,7 +121,7 @@
 						<p>I will add more later</p>
 					</div>
 					</article>
-					<article>
+				<article class="wrapper">
 					<div class="box">
 						<h4>Skills</h4>
 
@@ -103,7 +131,7 @@
 						</ul>
 					</div>
 					</article>
-						<footer>
+						<footer class="wrapper">
 							<p>For a full work history, have a look at my LinkedIn Profile</p>
 						</footer>
 			
@@ -112,7 +140,27 @@
 			</article>
 		</div>
 		<div id="container-footer">
-			<footer id="colophon">
+			<form id="contact">
+				<fieldset class="wrapper">
+					<legend>Contact</legend>
+						<ul class="group">
+							<li class="name">
+								<label for="name">Your Name</label>
+								<input type="text" id="name" name="name" />
+							</li>
+							<li class="email">
+								<label for="email">Your Email</label>
+								<input type="email" id="email" name="email" />
+							</li>
+							<li class="message">
+								<label for="message">Say Hello</label>
+								<textarea id="message" name="message"></textarea>
+							</li>
+						</ul>
+					<input class="send" type="submit" name="submit" value="Send" />
+				</fieldset>
+			</form>
+			<footer id="colophon" class="wrapper">
 				<p>©2016 all rights reserved. Fill out a form here to get in touch.</p>
 			</footer>
 		</div>	
