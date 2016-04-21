@@ -214,11 +214,6 @@ h6 {
     padding: 0;
 }
 
-
-#nav h3 {
-    text-transform: capitalize;
-}
-
 .wrapper {
 	padding: .75em;
 	-webkit-box-sizing: border-box;
@@ -326,6 +321,10 @@ textarea {
 }
 
 /* Responsive Navigation */
+
+nav {
+	margin-top:0.2em;
+}
 
 #nav {
 	padding: .75em 0;
@@ -592,6 +591,10 @@ MEDIA QUERY FOR BACKGROUND IMAGE WHEN LESS THAN 45 EM (720PX)
 		
 	.send {
 		width: 48.6%;
+	}
+	
+	nav {
+		margin-top:0.2em;
 	}
 	
 	#nav {
