@@ -551,6 +551,10 @@ MEDIA QUERY FOR BACKGROUND IMAGE WHEN LESS THAN 45 EM (720PX)
 		background-size: cover;
 		padding: 10% 0;
 	}
+	
+	#portfolio figure {
+			max-width:25em;
+	}
 }
 	
 /* ******************************************
